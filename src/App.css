@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* background-image: url("src/assets/movie background.jpeg"); */
 }
 
 .App-header {
@@ -12,9 +13,10 @@
   padding: 20px;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .movie-card {
-    width: 100%;
+    /* width: 100%; */
+    flex-direction: row;
   }
 
   .search-bar {
@@ -25,4 +27,10 @@
   .search-bar form {
     flex-direction: column;
   }
+}
+
+.loadButton {
+  margin: 30px;
+  padding: 10px 15px;
+  border-radius: 10px;
 }

@@ -1,0 +1,21 @@
+.card {
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 300px;
+  height: 500px;
+  align-items: center;
+  /* background-color: black; */
+}
+
+.movieCover {
+  width: 240px;
+  height: 300px;
+}
+
+.card :hover {
+  transform: scale(1.05);
+}

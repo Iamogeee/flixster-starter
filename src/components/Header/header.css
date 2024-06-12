@@ -1,0 +1,17 @@
+.header-item {
+  background-color: black;
+  padding: 10px 10px;
+  font-size: 20px;
+  color: red;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .navBar {
+  display: flex;
+  justify-content: space-around;
+} */
+/* 
+.sortOptions {
+  width: 100px;
+} */
