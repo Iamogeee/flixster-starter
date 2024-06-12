@@ -43,6 +43,7 @@ const App = () => {
 
   const handleNowPlaying = () => {
     setNowPlaying(true);
+    setMovies([]);
     setUrl(
       `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`
     );
@@ -70,6 +71,11 @@ const App = () => {
 
   const loadMore = () => {
     setPageNumber(pageNumber + 1);
+    setUrl(
+      `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${
+        pageNumber + 1
+      }`
+    );
   };
 
   const handleSortOption = () => {

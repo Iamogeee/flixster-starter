@@ -4,7 +4,7 @@ import "./header.css";
 const Header = (props) => {
   return (
     <div className="header-item">
-      <h1> 🎬 FLIXSTER 🍿</h1>
+      <h1> 🎬 FLIXSTER </h1>
 
       {/* <div className="navBar"> */}
       <div>
