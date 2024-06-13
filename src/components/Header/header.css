@@ -1,17 +1,21 @@
 .header-item {
   background-color: black;
-  padding: 10px 10px;
+  padding: 0px 10px;
   font-size: 20px;
   color: red;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
+  margin
 }
 
-/* .navBar {
+.nav-bar {
   display: flex;
   justify-content: space-around;
-} */
-/* 
-.sortOptions {
-  width: 100px;
-} */
+  align-items: center;
+}
+
+select {
+  height: fit-content;
+}

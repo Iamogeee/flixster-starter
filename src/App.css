@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
   /* background-image: url("src/assets/movie background.jpeg"); */
 }
 
@@ -11,6 +12,11 @@
   justify-content: space-evenly;
   color: white;
   padding: 20px;
+}
+
+body {
+  background: linear-gradient(40deg, white, black);
+  background-image: url(src/assets/Whitebackground.jpeg);
 }
 
 @media (min-width: 768px) {

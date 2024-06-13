@@ -11,6 +11,7 @@ const App = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [nowPlaying, setNowPlaying] = useState(true);
+  const [sortOptions, setSortOptions] = useState();
   const [url, setUrl] = useState(
     `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`
   );
@@ -78,8 +79,17 @@ const App = () => {
     );
   };
 
-  const handleSortOption = () => {
-    setSortOption;
+  const handleSortOption = (event) => {
+    if (event == "default") {
+      return;
+    }
+    console.log(event);
+    setSortOptions(event);
+    setMovies([]);
+    setUrl(
+      "https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=1&sort_by=" +
+        event
+    );
   };
 
   return (

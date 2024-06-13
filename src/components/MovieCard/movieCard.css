@@ -8,14 +8,17 @@
   width: 300px;
   height: 500px;
   align-items: center;
-  /* background-color: black; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: black;
+  color: white;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .movieCover {
-  width: 240px;
+  width: 300px;
   height: 300px;
-}
-
-.card :hover {
-  transform: scale(1.05);
 }
