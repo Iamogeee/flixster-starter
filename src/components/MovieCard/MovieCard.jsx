@@ -13,7 +13,7 @@ const MovieCard = ({
   viewed,
 }) => {
   const [like, setLike] = useState(false);
-  // const [watched, setWatched] = useState(false);
+  const [watched, setWatched] = useState(false);
   return (
     <div className="card" onClick={() => onMovieClick(movie)}>
       <div>
@@ -23,20 +23,35 @@ const MovieCard = ({
       <p>
         Rating: <span>{rating} ⭐️</span>
       </p>
-      <button
-        onClick={(e) => {
-          setLike((prev) => !prev);
-          onFavorite(movie);
-          e.stopPropagation();
-        }}
-      >
-        {!like ? (
-          <i className="fa-regular fa-heart"></i>
-        ) : (
-          <i className="fa-solid fa-heart" style={{ color: "#ff0000" }}></i>
-        )}
-      </button>
-      <button onClick={(e) => e.stopPropagation()}>Watched</button>
+      <div className="movie-card-bottom">
+        <button
+          onClick={(e) => {
+            setLike((prev) => !prev);
+            onFavorite(movie);
+            e.stopPropagation();
+          }}
+        >
+          {!like ? (
+            <i className="fa-regular fa-heart"></i>
+          ) : (
+            <i className="fa-solid fa-heart" style={{ color: "#ff0000" }}></i>
+          )}
+        </button>
+        <button
+          onClick={(e) => {
+            setWatched((prev) => !prev);
+            onViewed(movie);
+            e.stopPropagation();
+          }}
+        >
+          Watched:
+          {!watched ? (
+            <i className="fa-regular fa-square-check"></i>
+          ) : (
+            <i className="fa-solid fa-square-check"></i>
+          )}
+        </button>
+      </div>
     </div>
   );
 };

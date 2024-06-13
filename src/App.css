@@ -15,8 +15,8 @@
 }
 
 body {
-  background: linear-gradient(40deg, white, black);
-  background-image: url(src/assets/Whitebackground.jpeg);
+  /* background: linear-gradient(40deg, white, black); */
+  background-image: url("src/assets/Whitebackground.jpeg");
 }
 
 @media (min-width: 768px) {

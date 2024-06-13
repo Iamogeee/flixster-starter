@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid black;
+  border: 2px solid red;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -21,4 +21,10 @@
 .movieCover {
   width: 300px;
   height: 300px;
+}
+
+.movie-card-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }

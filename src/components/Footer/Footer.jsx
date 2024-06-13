@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
-  return <div className="footer">Footer</div>;
+  return <div className="footer">© 2024 Flixster</div>;
 };
 
 export default Footer;
