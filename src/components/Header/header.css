@@ -4,10 +4,20 @@
   font-size: 20px;
   color: red;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
-  margin
+}
+
+.header-left {
+  display: flex;
+  gap: 20px;
+}
+
+.header-button {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
 }
 
 .nav-bar {

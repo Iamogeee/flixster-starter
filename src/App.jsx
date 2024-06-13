@@ -12,16 +12,30 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [nowPlaying, setNowPlaying] = useState(true);
   const [sortOptions, setSortOptions] = useState();
+  const [liked, setLiked] = useState([]);
+  const [viewed, setViewed] = useState([]);
   const [url, setUrl] = useState(
     `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`
   );
   const [selectedMovie, setSelectedMovie] = useState(null);
-
   const handleMovieClick = (movie) => {
     console.log(movie);
     setSelectedMovie(movie);
   };
+  const toggleLike = (movie) => {
+    setLiked((prev) => {
+      let index = prev.indexOf(movie.id);
+      if (index == -1) {
+        prev.push(movie.id);
+      } else {
+        prev.splice(index, 1);
+      }
 
+      return prev;
+    });
+    console.log("postliked", liked);
+  };
+  console.log(liked);
   const handleClose = () => {
     setSelectedMovie(null);
   };
@@ -51,7 +65,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log("effect");
     const options = {
       method: "GET",
       headers: {
@@ -103,7 +116,14 @@ const App = () => {
 
       {nowPlaying ? (
         <>
-          <MovieList data={movies} onMovieClick={handleMovieClick} />
+          <MovieList
+            data={movies}
+            onMovieClick={handleMovieClick}
+            onLike={toggleLike}
+            onWatched={setViewed}
+            favorite={liked}
+            watched={viewed}
+          />
 
           {selectedMovie && (
             <Modal movie={selectedMovie} onClose={handleClose} />
@@ -115,7 +135,14 @@ const App = () => {
       ) : (
         <>
           <SearchBar input={searchQuery} onSearch={onSearchChange} />
-          <MovieList data={movies} onMovieClick={handleMovieClick} />
+          <MovieList
+            onLike={toggleLike}
+            onWatched={setViewed}
+            favorite={liked}
+            watched={viewed}
+            data={movies}
+            onMovieClick={handleMovieClick}
+          />
           <Modal movie={selectedMovie} onClose={handleClose} />
         </>
       )}
