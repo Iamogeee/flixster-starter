@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url("src/assets/Whitebackground.jpeg");
+  background-image: url("/Whitebackground.jpeg");
 }
 
 .App-header {
