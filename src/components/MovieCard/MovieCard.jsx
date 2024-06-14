@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./movieCard.css";
+import logo from "../../assets/F.png";
 
 const MovieCard = ({
   movie,
@@ -9,15 +10,13 @@ const MovieCard = ({
   onMovieClick,
   onFavorite,
   onViewed,
-  // liked,
-  // viewed,
 }) => {
   const [like, setLike] = useState(false);
   const [watched, setWatched] = useState(false);
   return (
     <div className="card" onClick={() => onMovieClick(movie)}>
       <div>
-        <img className="flixster-icon" src="src/assets/F.png" />
+        <img className="flixster-icon" src={logo} />
         <img className="movieCover" src={path} alt="" />
       </div>
       <h3>{title}</h3>

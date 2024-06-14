@@ -11,7 +11,6 @@ const App = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [nowPlaying, setNowPlaying] = useState(true);
-  const [sortOptions, setSortOptions] = useState();
   const [liked, setLiked] = useState([]);
   const [viewed, setViewed] = useState([]);
   const [url, setUrl] = useState(
@@ -21,7 +20,6 @@ const App = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
 
   const handleMovieClick = (movie) => {
-    console.log(movie);
     setSelectedMovie(movie);
   };
   const toggleLike = (movie) => {
@@ -35,9 +33,7 @@ const App = () => {
 
       return prev;
     });
-    console.log("postliked", liked);
   };
-  console.log(liked);
   const handleClose = () => {
     setSelectedMovie(null);
   };
@@ -79,7 +75,6 @@ const App = () => {
     fetch(url, options)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setMovies((oldMovies) => oldMovies.concat(response.results));
       })
       .catch((err) => console.error(err));
@@ -98,8 +93,6 @@ const App = () => {
     if (event == "default") {
       return;
     }
-    console.log(event);
-    setSortOptions(event);
     setMovies([]);
     setUrl(
       "https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=1&sort_by=" +
