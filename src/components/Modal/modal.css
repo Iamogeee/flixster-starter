@@ -15,15 +15,17 @@
   background-color: black;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: 2px solid red;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .image-container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
-  /* gap: 30px; */
 }
+
 .bottom {
   height: 20vh;
   overflow: scroll;
@@ -37,11 +39,11 @@ img {
   object-fit: contain;
   width: 100%;
   height: 30vh;
-  /* height: 40%; */
 }
 
-button {
-  background-color: white;
+.modal-button {
+  color: red;
+  border-radius: 5px;
 }
 
 .media-content {
@@ -53,11 +55,6 @@ button {
 }
 
 iframe {
-  /* object-fit: fill; */
   width: 100%;
   height: 30vh;
 }
-
-/* .modal-header {
-  font-size: 20px;
-} */

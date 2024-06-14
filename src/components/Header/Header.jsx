@@ -23,15 +23,12 @@ const Header = (props) => {
         </div>
       </div>
 
-      {/* <div className="navBar"> */}
       <button
         style={{ border: "none", backgroundColor: "transparent" }}
         onClick={props.onSearchChange}
       >
         <i className="fa-solid fa-magnifying-glass"></i>{" "}
       </button>
-
-      {/* </div> */}
     </div>
   );
 };

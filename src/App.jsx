@@ -17,7 +17,9 @@ const App = () => {
   const [url, setUrl] = useState(
     `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`
   );
+
   const [selectedMovie, setSelectedMovie] = useState(null);
+
   const handleMovieClick = (movie) => {
     console.log(movie);
     setSelectedMovie(movie);

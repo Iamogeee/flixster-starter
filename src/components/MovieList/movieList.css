@@ -4,10 +4,5 @@
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
-  /* align-items: center; */
   margin-left: 20px;
 }
-
-/* .movieList :hover {
-  transform: scale(1.15);
-} */

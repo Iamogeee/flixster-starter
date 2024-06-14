@@ -29,6 +29,8 @@ function mapGenres(genres) {
 }
 
 const Modal = ({ movie, onClose }) => {
+  if (!movie) return null;
+
   const [trailerUrl, setTrailerUrl] = useState("");
   const getModalVideo = async (movieId) => {
     const apiKey = import.meta.env.VITE_API_KEY;
@@ -46,7 +48,6 @@ const Modal = ({ movie, onClose }) => {
         console.error("Error fetching movie trailer:", error);
       });
 
-    //❗️CHANGE THE LINE BELOW TO SET YOUR TRAILER URL
     setTrailerUrl(trailerUrl);
   };
 
@@ -54,14 +55,11 @@ const Modal = ({ movie, onClose }) => {
     getModalVideo(movie.id);
   }, [movie]);
 
-  if (!movie) return null;
-
   return (
     <div className="modal_popup" onClick={onClose}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>{movie.title}</h2>
-          {/* <p className="close">&times; Movie Title</p> */}
         </div>
         <div className="modal-content">
           <div className="image-container">
@@ -74,11 +72,11 @@ const Modal = ({ movie, onClose }) => {
             </div>
             <div className="media-content">
               <iframe
-                src={trailerUrl} // CHANGE TRAILER VARIABLE TO YOURS
+                src={trailerUrl}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 title="Movie Trailer"
-                className="modal-movie-trailer" // CHANGE CLASS NAME TO YOURS
+                className="modal-movie-trailer"
               ></iframe>
             </div>
           </div>
@@ -88,9 +86,9 @@ const Modal = ({ movie, onClose }) => {
             <p>Overview: {movie.overview}</p>
           </div>
 
-          <div></div>
-
-          <button onClick={onClose}>Close</button>
+          <button className="modal-button" onClick={onClose}>
+            Close
+          </button>
         </div>
       </div>
     </div>
