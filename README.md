@@ -14,7 +14,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://flixster-start
   - [x] Users can view a list of current movies from The Movie Database API.
   - [x] For each movie displayed, users can see its title, poster image, and votes.
   - [x] Users can load more current movies by clicking a button at the bottom of the list (page should not be reloaded).
-- [ ] **Search Functionality**
+- [x] **Search Functionality**
   - [x] Users can search for movies and view the results in a grid.
   - [x] Users can clear results and view previous current movies displayed.
 - [x] **Accessibility Features**
@@ -44,9 +44,15 @@ Deployed Application (optional): [Flixster Deployed Site](https://flixster-start
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+`<div>
+<a href="https://www.loom.com/share/f1f499eae572441e861376790321008a">
+<p>Exploring Flickster - A Movie Website Overview - Watch Video</p>
+</a>
+<a href="https://www.loom.com/share/f1f499eae572441e861376790321008a">
+<img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f1f499eae572441e861376790321008a-with-play.gif">
+</a>
 
-`ADD_EMBEDDED_CODE_HERE`
+  </div>`
 
 ### Reflection
 
